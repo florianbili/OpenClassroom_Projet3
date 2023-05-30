@@ -1,0 +1,94 @@
+*{  
+    font-family: 'roboto','Shrikhand';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$primary : #9356DC;
+$secondary : #FF79DA;
+$tercary : #99E2D0;
+
+.view{
+    max-width: 375px;
+}
+
+h1{
+    font-size: 24px;
+    font-family: 'Shrikhand';
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 17px;
+}
+header {
+    display: flex;
+    width: 100%;
+
+        img{
+        width:70%;
+        margin: auto;
+        }
+}
+/*Location*/ 
+
+.location {
+    background-color: #EAEAEA;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    img{
+        max-height: 16px;
+        margin-right: 5%;
+        
+    }
+    h2{
+        padding: 5%;
+    }
+}
+
+/*Dicscover*/
+
+.discover {
+    background-color: #F6F6F6;
+    text-align: center;
+}
+
+/*Fonctionnement*/ 
+.fonctionnement__step{ 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+
+    
+    img{
+        max-height: 20px;
+    }
+    
+
+}
+
+/*Restaurants*/ 
+
+.restaurant {
+    img{
+        max-width: 346px;
+    }
+}
+
+
+footer{
+    img{
+        max-height: 26px;
+    }
+}
