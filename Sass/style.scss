@@ -11,7 +11,9 @@ $secondary : #FF79DA;
 $tercary : #99E2D0;
 
 .view{
-    max-width: 375px;
+    min-width: 375px;
+    max-width: 1440px;
+    margin: auto;
 }
 
 button{
@@ -21,8 +23,14 @@ button{
     border-radius: 25px;
     border: 0;
     background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%); 
-
+    transition: opacity 300ms, scale(1.2);
+    
 }
+button:hover{
+   opacity: 80%;
+   transform: scale(1.01);
+}
+
 .btn_cmd {
     display: flex;
     margin: auto;
@@ -83,6 +91,16 @@ header {
             margin-left: 50%;
         }
 }
+
+@media (min-width: 768px){
+    header {
+        padding: 1%;
+        img{
+            width: 40%;
+        }
+    }
+
+}
 /*Location*/ 
 
 .location {
@@ -123,7 +141,15 @@ header {
         flex-direction: column;
         margin: 8%;
         gap: 1em;
-  
+}
+@media (min-width: 768px) {
+    .fonctionnement > div{
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        gap: 0;
+    }  
+    
 }
 
 .fonctionnement__step{ 
@@ -133,13 +159,21 @@ header {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     padding: 10%;
+    white-space: nowrap;
         
     img{
         max-height: 20px;
     }
-    
-
 }
+
+@media (min-width: 768px) {
+    .fonctionnement__step {
+        padding: 2%;
+        margin: auto;
+        width: 30%;
+    }
+}
+
 
 .fonctionnement__step:first-child::before{
     content: "1";
@@ -180,6 +214,10 @@ header {
     top: 7px
 }
 
+.fonctionnement__step:nth-child(3) i{
+    color: $primary;
+}
+
 /*Restaurants*/ 
 
 .restaurant {
@@ -216,24 +254,37 @@ header {
 }
         
 
-        div{
-            width: 50%;
-        }
+        
+    }
+
+    & .restaurant__coeur{
+        float: right;
+        
     }
 }
 
 .restaurant__card{
     background-color: white;
     box-sizing: border-box;
-    border-radius: 15px;
-    
+    border-radius: 15px;   
+}
+
+@media (min-width: 768px) {
+    .restaurant div {
+        flex-direction: unset;
+        flex-wrap: wrap;
+    }
+    .restaurant img{
+        width: 500px; 
+        height: 250px;
+    }
+    .restaurant__description div{
+        flex-direction: unset;
+    }
 }
 
 
 
-.restaurant__coeur{
-    float: right;
-}
 
 
 /* Footer */
@@ -263,7 +314,21 @@ footer div{
         flex-direction: row;
     }
 }
-
+@media (min-width: 768px) {
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: right;
+        padding: 3%;
+        gap: 50px;
+        div{
+            flex-direction: row;
+            text-align: right;
+            gap: 20px;
+        }
+    }
+    
+}
 
 
 /*menu*/ 
@@ -284,6 +349,10 @@ footer div{
     border-radius: 34px;
     margin-top: -34px;
     padding-bottom: 30px;
+    & .menu__coeur{
+        color: $primary;
+
+    }
 }
 
 .menu button{
@@ -326,9 +395,12 @@ footer div{
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
 }
 
-.menu__card div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.menu__card {
+    div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
 }
 

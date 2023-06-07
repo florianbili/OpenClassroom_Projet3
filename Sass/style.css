@@ -7,7 +7,9 @@
 }
 
 .view {
-  max-width: 375px;
+  min-width: 375px;
+  max-width: 1440px;
+  margin: auto;
 }
 
 button {
@@ -17,6 +19,12 @@ button {
   border-radius: 25px;
   border: 0;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  transition: opacity 300ms, scale(1.2);
+}
+
+button:hover {
+  opacity: 80%;
+  transform: scale(1.01);
 }
 
 .btn_cmd {
@@ -76,6 +84,14 @@ header span {
   margin-left: 50%;
 }
 
+@media (min-width: 768px) {
+  header {
+    padding: 1%;
+  }
+  header img {
+    width: 40%;
+  }
+}
 /*Location*/
 .location {
   background-color: #EAEAEA;
@@ -114,6 +130,14 @@ header span {
   gap: 1em;
 }
 
+@media (min-width: 768px) {
+  .fonctionnement > div {
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+  }
+}
 .fonctionnement__step {
   width: 100%;
   display: flex;
@@ -121,11 +145,19 @@ header span {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   padding: 10%;
+  white-space: nowrap;
 }
 .fonctionnement__step img {
   max-height: 20px;
 }
 
+@media (min-width: 768px) {
+  .fonctionnement__step {
+    padding: 2%;
+    margin: auto;
+    width: 30%;
+  }
+}
 .fonctionnement__step:first-child::before {
   content: "1";
   background-color: #9356DC;
@@ -165,6 +197,10 @@ header span {
   top: 7px;
 }
 
+.fonctionnement__step:nth-child(3) i {
+  color: #9356DC;
+}
+
 /*Restaurants*/
 .restaurant {
   background-color: #F6F6F6;
@@ -201,8 +237,8 @@ header span {
   justify-content: end;
   padding-right: 10%;
 }
-.restaurant .restaurant__description div {
-  width: 50%;
+.restaurant .restaurant__coeur {
+  float: right;
 }
 
 .restaurant__card {
@@ -211,10 +247,19 @@ header span {
   border-radius: 15px;
 }
 
-.restaurant__coeur {
-  float: right;
+@media (min-width: 768px) {
+  .restaurant div {
+    flex-direction: unset;
+    flex-wrap: wrap;
+  }
+  .restaurant img {
+    width: 500px;
+    height: 250px;
+  }
+  .restaurant__description div {
+    flex-direction: unset;
+  }
 }
-
 /* Footer */
 footer {
   background-color: #353535;
@@ -240,6 +285,20 @@ footer div div {
   flex-direction: row;
 }
 
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    padding: 3%;
+    gap: 50px;
+  }
+  footer div {
+    flex-direction: row;
+    text-align: right;
+    gap: 20px;
+  }
+}
 /*menu*/
 .menu__subtitle {
   border-bottom: 3px solid #99E2D0;
@@ -258,6 +317,9 @@ footer div div {
   border-radius: 34px;
   margin-top: -34px;
   padding-bottom: 30px;
+}
+.menu .menu__coeur {
+  color: #9356DC;
 }
 
 .menu button {
