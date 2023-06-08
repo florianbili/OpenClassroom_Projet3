@@ -16,7 +16,7 @@ $tercary : #99E2D0;
     margin: auto;
 }
 
-button{
+.btn{
     font-size: 16px;
     color: white;
     padding: 5%;
@@ -24,21 +24,34 @@ button{
     border: 0;
     background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%); 
     transition: opacity 300ms, scale(1.2);
+
+    &__cmd {
+
+        display: flex;
+        margin: auto;
+        padding: 4%;
+        margin-top: 4%;
+        margin-bottom: 10%;
+    }
     
 }
-button:hover{
+
+@media (min-width : 768px){
+    .btn{
+        padding: 3%;
+        font-size: 20px;
+        &__cmd{
+            padding: 2%;
+        }
+    }
+}
+
+.btn:hover{
    opacity: 80%;
    transform: scale(1.01);
 }
 
-.btn_cmd {
-    display: flex;
-    margin: auto;
-    padding: 4%;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    
-}
+
 legend{
     font-style: italic;
     font-size: 15px;
@@ -47,12 +60,11 @@ legend{
 /* H */
 
 h1{
-    padding-top: 10%;
-    padding-bottom: 5%;
-    margin-left: 5%;
     font-size: 24px;
     font-weight: 600;
 }
+
+
 
 h2 {
     font-size: 18px;
@@ -64,9 +76,34 @@ h3 {
     font-weight: 300;
 }
 
+@media (min-width : 768px) {
+    h1{
+        font-size: 28px;
+    }
+
+    h2{
+        font-size: 22px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    legend {
+        font-size: 19px;
+    }
+    p{
+        font-size: 19px;
+    }
+}
+
 a{
     text-decoration: none;
     color: black;
+}
+
+section{
+    h1{
+        padding-left: 4%;
+    }
 }
 
 
@@ -125,6 +162,7 @@ header {
 .discover {
     background-color: #F6F6F6;
     text-align: center;
+    padding-bottom: 5%;
     div{
         padding: 5%;
         display: flex;
@@ -135,6 +173,10 @@ header {
 }
 
 /*Fonctionnement*/ 
+
+.fonctionnement {
+    margin-top: 8%;
+}
 
 .fonctionnement > div {
         display: flex;
@@ -160,6 +202,7 @@ header {
     border-radius: 20px;
     padding: 10%;
     white-space: nowrap;
+    gap : 10px;
         
     img{
         max-height: 20px;
@@ -224,17 +267,16 @@ header {
     background-color: #F6F6F6;
     width: 100%;
     padding-bottom: 10%;
+    padding-top: 10%;
     img{
         width: 330px; 
         height: 200px;
         border-radius: 15px 15px 0 0;
         object-fit: cover;
     }
-    div{
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        gap : 15px;
+
+    h1{
+        padding-bottom: 5%;
     }
     h2 {
         padding: 2%;
@@ -242,45 +284,56 @@ header {
     h3{
         padding: 2%;
     }
-    & .restaurant__description{
-        width: 100%;
+    &__cards {
+        background-color:#F6F6F6;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        i{
-                display: flex;
-    justify-content: end;
-    padding-right: 10%;
-}
-        
-
-        
+        flex-direction: column;
+        gap: 15px;
+    }
+    &__card {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        background-color: white;
+        box-sizing: border-box;
+        border-radius: 15px;   
+        }
+    &__description {
+        display: flex;
+        align-items: center;
+        padding: 2%;
+        white-space: nowrap;
+        div{
+            width: 50%;
+        }
     }
 
-    & .restaurant__coeur{
-        float: right;
-        
+    &__coeur {
+        text-align: right;
+        padding: 4%;
     }
-}
-
-.restaurant__card{
-    background-color: white;
-    box-sizing: border-box;
-    border-radius: 15px;   
-}
+    }
 
 @media (min-width: 768px) {
-    .restaurant div {
-        flex-direction: unset;
-        flex-wrap: wrap;
+
+    .restaurant {
+
+        img{
+            white-space: nowrap;
+
+        }
+        &__cards{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: unset;
+            width: 100%;
+        }
+        &__card {
+            
+            
+        }
     }
-    .restaurant img{
-        width: 500px; 
-        height: 250px;
-    }
-    .restaurant__description div{
-        flex-direction: unset;
-    }
+   
 }
 
 
@@ -310,6 +363,8 @@ footer{
 footer div{
     display: flex;
     flex-direction: column;
+    gap: 5px;
+    align-items: baseline;
     div{
         flex-direction: row;
     }
@@ -337,7 +392,7 @@ footer div{
     width: 10%;
     margin-left: 10px;
     padding-bottom: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .menu {
