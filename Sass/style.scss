@@ -227,10 +227,11 @@ header {
     text-align: center;
     color: white;
     position: relative;
-    left: -42px;
-    top: 7px;
-
+    left: -15%;
+    top: 5%;
 }
+
+
 .fonctionnement__step:nth-child(2)::before{
     content: "2";
     background-color: $primary;
@@ -240,8 +241,8 @@ header {
     text-align: center;
     color: white;
     position: relative;
-    left: -43px;
-    top: 10px
+    left: -15%;
+    top: 5%;
 
 }
 .fonctionnement__step:nth-child(3)::before{
@@ -253,8 +254,8 @@ header {
     text-align: center;
     color: white;
     position: relative;
-    left: -40px;
-    top: 7px
+    left: -15%;
+    top: 5%;
 }
 
 .fonctionnement__step:nth-child(3) i{
