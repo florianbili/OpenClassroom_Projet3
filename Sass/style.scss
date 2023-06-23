@@ -53,7 +53,6 @@ $tercary : #99E2D0;
 
 
 legend{
-    font-style: italic;
     font-size: 15px;
 }
 
@@ -120,8 +119,9 @@ header {
     
 
         img{
-        width:70%;
-        margin: auto;
+            width: 60%;
+            margin: auto;
+            padding: 5%;
         }
         span{
             color: black;
@@ -312,6 +312,16 @@ header {
     &__coeur {
         text-align: right;
         padding: 4%;
+        & path {
+            stroke: black;
+            fill: white;
+          
+            &:hover{
+                fill: #9356DC;
+                stroke: none;
+            }
+        }
+        
     }
     }
 
@@ -329,10 +339,7 @@ header {
             flex-direction: unset;
             width: 100%;
         }
-        &__card {
-            
-            
-        }
+       
     }
    
 }
@@ -422,8 +429,9 @@ footer div{
     margin: auto;
 }
 .menu__img{
-    width: 375px;
+    width: 100%;
     height: 275px;
+    object-fit: cover;
 }
 
 .menu__title{
@@ -448,6 +456,10 @@ footer div{
     border-radius: 15px;
     padding: 3%;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    &:focus-within{
+        background-color: green;
+    }
 }
 
 .menu__card {
